@@ -3,22 +3,24 @@
 int main(void) {
 
 
-    int num;
-    int abs;
+    int count =0; // 숫자 문자 개수 세는 변수
+    char c;
 
-
-    printf("input an integer: ");
-    scanf("%d", &num);
+    printf("input a string: ");
     
-    if (num<0) {
-        abs= - num;
 
-    } else {
-        abs = num;
+
+
+
+   while ( (c = getchar()) != '\n') {
+
+    if ( c>= '0' && c <= '9') {
+        count ++;
     }
+   }
 
 
-    printf("The absolute value of %d is %d\n", num, abs);
+    printf("The number of digits is %d\n", count);
 
     return 0;
     
