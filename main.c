@@ -1,19 +1,25 @@
+
 #include <stdio.h>
 int main(void) {
 
 
     int num;
-    printf("input a number: ");
+    int abs;
+
+
+    printf("input an integer: ");
     scanf("%d", &num);
     
-    if (num>0) {
-        printf("positive number\n");
+    if (num<0) {
+        abs= - num;
 
-    } else if (num<0) {
-        printf("negative number\n");
     } else {
-        printf("zero");
+        abs = num;
     }
+
+
+    printf("The absolute value of %d is %d\n", num, abs);
+
     return 0;
     
 }
